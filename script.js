@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const holeCardSection = document.querySelector(".hole-cards-section");
   const cardNavigation = document.querySelector(".card-navigation");
   const alert = document.querySelector(".alert");
-  let myAudio = new Audio("/audio/Children Yay  Sound Effect.mp3")
+  let myAudio = new Audio("/audio/Children Yay  Sound Effect.mp3");
   let audio = new Audio("/audio/growl.mp3");
   let selectedCards = [];
   let selectedTargetCards = [];
@@ -45,6 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "/images/Eight.jpg",
       alt: "Eight",
       class: "Eight",
+    },
+    {
+      name: "/images/eight.jpg",
+      alt: "eight",
+      class: "eight",
     },
   ];
 
@@ -119,23 +124,100 @@ document.addEventListener("DOMContentLoaded", () => {
                       classTally = totalCard.className;
                       classTallyArray.push(classTally);
                     });
-                    let Ace = classTallyArray.filter(x => x === "Ace").length;
-                    let King = classTallyArray.filter(x => x === "King").length;
-                    let Queen = classTallyArray.filter(x => x === "Queen").length;
-                    let Nine = classTallyArray.filter(x => x === "Nine").length;
-                    let Seven = classTallyArray.filter(x => x === "Seven").length;
-                    let Three = classTallyArray.filter(x => x === "Three").length;
-                    let Eight = classTallyArray.filter(x => x === "Eight").length;
+                    let Ace = classTallyArray.filter((x) => x === "Ace").length;
+                    let King = classTallyArray.filter(
+                      (x) => x === "King"
+                    ).length;
+                    let Queen = classTallyArray.filter(
+                      (x) => x === "Queen"
+                    ).length;
+                    let Nine = classTallyArray.filter(
+                      (x) => x === "Nine"
+                    ).length;
+                    let Seven = classTallyArray.filter(
+                      (x) => x === "Seven"
+                    ).length;
+                    let Three = classTallyArray.filter(
+                      (x) => x === "Three"
+                    ).length;
+                    let Eight = classTallyArray.filter(
+                      (x) => x === "Eight"
+                    ).length;
 
+                    let QueenCount = 3;
+                    let NineCount = 2;
 
-                    if (Ace === 3 || King === 3 || Queen === 3 || Nine === 3 || Seven === 3 || Three === 3 || Eight === 3) {
+                    if (
+                      Ace === 3 ||
+                      King === 3 ||
+                      Nine === 3 ||
+                      Seven === 3 ||
+                      Three === 3 ||
+                      Eight === 3
+                    ) {
                       alert.innerHTML = "Three of a Kind";
-                      alert.style.display = "flex";
-                      myAudio.play();
-                      alert.addEventListener("click", () => {
-                        alert.style.display = "none";
-                      }) 
-                    } else{
+                      displayAlert();
+                    } else if (Queen === QueenCount && Nine === NineCount) {
+                      alert.innerHTML = "Flush";
+                      displayAlert();
+                    } else if (
+                      (Ace === 2 && King === 2) ||
+                      (Ace === 2 && Nine === 2) ||
+                      (Ace === 2 && Seven === 2) ||
+                      (Ace === 2 && Three === 2) ||
+                      (Ace === 2 && Eight === 2) ||
+                      (Ace === 2 && Queen === 2) ||
+                      (King === 2 && Ace === 2) ||
+                      (King === 2 && Nine === 2) ||
+                      (King === 2 && Seven === 2) ||
+                      (King === 2 && Three === 2) ||
+                      (King === 2 && Eight === 2) ||
+                      (King === 2 && Queen === 2) ||
+                      (Nine === 2 && Ace === 2) ||
+                      (Nine === 2 && King === 2) ||
+                      (Nine === 2 && Seven === 2) ||
+                      (Nine === 2 && Three === 2) ||
+                      (Nine === 2 && Eight === 2) ||
+                      (Nine === 2 && Queen === 2) ||
+                      (Seven === 2 && Ace === 2) ||
+                      (Seven === 2 && King === 2) ||
+                      (Seven === 2 && Nine === 2) ||
+                      (Seven === 2 && Three === 2) ||
+                      (Seven === 2 && Eight === 2) ||
+                      (Seven === 2 && Queen === 2) ||
+                      (Three === 2 && Ace === 2) ||
+                      (Three === 2 && King === 2) ||
+                      (Three === 2 && Nine === 2) ||
+                      (Three === 2 && Seven === 2) ||
+                      (Three === 2 && Eight === 2) ||
+                      (Three === 2 && Queen === 2) ||
+                      (Eight === 2 && Ace === 2) ||
+                      (Eight === 2 && King === 2) ||
+                      (Eight === 2 && Nine === 2) ||
+                      (Eight === 2 && Three === 2) ||
+                      (Eight === 2 && Queen === 2) ||
+                      (Eight === 2 && Seven === 2) ||
+                      (Queen === 2 && Ace === 2) ||
+                      (Queen === 2 && King === 2) ||
+                      (Queen === 2 && Nine === 2) ||
+                      (Queen === 2 && Three === 2) ||
+                      (Queen === 2 && Seven === 2) ||
+                      (Queen === 2 && Eight === 2)
+                    ) {
+                      alert.innerHTML = "Two Pairs";
+                      displayAlert();
+                    } else if (
+                      Ace === 2 ||
+                      King === 2 ||
+                      Nine === 2 ||
+                      Seven === 2 ||
+                      Three === 2 ||
+                      Eight === 2 ||
+                      Queen === 2
+                    ) {
+                      alert.innerHTML = "One Pair";
+                      displayAlert();
+                    } else {
                       audio.play();
                     }
                   }
@@ -145,6 +227,14 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       });
+    });
+  }
+
+  function displayAlert() {
+    alert.style.display = "flex";
+    myAudio.play();
+    alert.addEventListener("click", () => {
+      alert.style.display = "none";
     });
   }
 
