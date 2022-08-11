@@ -1,1 +1,1 @@
-# This poker game has not all the functionalities of a full poker game, only the Three of a Kind but other Hand Pickings can be added, it has the hole card functions so it is a bit more realistic. Have fun!!
+# Updated to Include Three of a kind, Two pairs, one pair and full house. Work still in progress
