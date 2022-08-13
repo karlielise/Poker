@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Poker Game With Vanilla JS
 
 ###### This poker game has not all the functionalities of a full poker game, the **Three of a Kind, Flash, Two Pairs, One Pair and now Straight** but other Hand Pickings can be added, it has the hole card functions so it is a bit more realistic. Have fun!!
@@ -18,4 +17,4 @@
 =======
 ###### Updated to Include Three of a kind, Two pairs, one pair and full house. Work still in progress
 
->>>>>>> 8261708edad21e166b17c2eae94d22efd87a6ac0
+8261708edad21e166b17c2eae94d22efd87a6ac0
