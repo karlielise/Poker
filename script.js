@@ -247,6 +247,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   displayHoleCards();
-  // let noPath = cardName.split("/").pop();
-  // let newName = noPath.split(".").slice(0, -1).join(".");
 });
