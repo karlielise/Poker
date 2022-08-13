@@ -4,7 +4,8 @@
 ###### This poker game has not all the functionalities of a full poker game, the **Three of a Kind, Flash, Two Pairs, One Pair and now Straight** but other Hand Pickings can be added, it has the hole card functions so it is a bit more realistic. Have fun!!
 
 ###### Here's a look into the UI
-![Poker Game Image Demo](https://www.dropbox.com/home/Photos?preview=pokerjs.png)
+![pokerjs Image Demo](https://user-images.githubusercontent.com/69555904/184492845-b5746cef-515f-4af6-a347-46d4158f9f1a.png)
+
 
 # HOW TO USE
 ###### 1. Click any of the buttons above, You can only click twice, you can click a button twice or two buttons twice.
