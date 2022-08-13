@@ -162,42 +162,49 @@ document.addEventListener("DOMContentLoaded", () => {
                       displayAlert();
                     } else if (
                       (Ace === 2 && King === 2) ||
+                      (Ace === 4) ||
                       (Ace === 2 && Nine === 2) ||
                       (Ace === 2 && Seven === 2) ||
                       (Ace === 2 && Three === 2) ||
                       (Ace === 2 && Eight === 2) ||
                       (Ace === 2 && Queen === 2) ||
                       (King === 2 && Ace === 2) ||
+                      (King === 4) ||
                       (King === 2 && Nine === 2) ||
                       (King === 2 && Seven === 2) ||
                       (King === 2 && Three === 2) ||
                       (King === 2 && Eight === 2) ||
                       (King === 2 && Queen === 2) ||
                       (Nine === 2 && Ace === 2) ||
+                      (Nine === 4) ||
                       (Nine === 2 && King === 2) ||
                       (Nine === 2 && Seven === 2) ||
                       (Nine === 2 && Three === 2) ||
                       (Nine === 2 && Eight === 2) ||
                       (Nine === 2 && Queen === 2) ||
                       (Seven === 2 && Ace === 2) ||
+                      (Seven === 4) ||
                       (Seven === 2 && King === 2) ||
                       (Seven === 2 && Nine === 2) ||
                       (Seven === 2 && Three === 2) ||
                       (Seven === 2 && Eight === 2) ||
                       (Seven === 2 && Queen === 2) ||
                       (Three === 2 && Ace === 2) ||
+                      (Three === 4) ||
                       (Three === 2 && King === 2) ||
                       (Three === 2 && Nine === 2) ||
                       (Three === 2 && Seven === 2) ||
                       (Three === 2 && Eight === 2) ||
                       (Three === 2 && Queen === 2) ||
                       (Eight === 2 && Ace === 2) ||
+                      (Eight === 4) ||
                       (Eight === 2 && King === 2) ||
                       (Eight === 2 && Nine === 2) ||
                       (Eight === 2 && Three === 2) ||
                       (Eight === 2 && Queen === 2) ||
                       (Eight === 2 && Seven === 2) ||
                       (Queen === 2 && Ace === 2) ||
+                      (Queen === 4) ||
                       (Queen === 2 && King === 2) ||
                       (Queen === 2 && Nine === 2) ||
                       (Queen === 2 && Three === 2) ||
@@ -235,6 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
     myAudio.play();
     alert.addEventListener("click", () => {
       alert.style.display = "none";
+      location.reload()
     });
   }
 
